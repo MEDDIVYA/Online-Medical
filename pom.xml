@@ -57,7 +57,7 @@
 	<build>
 		<plugins>
 			
-    <plugins>
+    
       <plugin>
         <!-- Skip tests at build time -->
         <groupId>org.apache.maven.plugins</groupId>
@@ -85,7 +85,7 @@
           <useProjectReferences>false</useProjectReferences>
         </configuration>
       </plugin>
-    </plugins>
+    
   
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
