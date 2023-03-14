@@ -56,6 +56,37 @@
 
 	<build>
 		<plugins>
+			
+    <plugins>
+      <plugin>
+        <!-- Skip tests at build time -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+	     <plugin>
+        <!-- we target Java 7.0 -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <compilerVersion>1.7</compilerVersion>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+	     <plugin>
+        <!-- projects should be modified one at a time in eclipse
+          we therefore don't use project references -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+          <useProjectReferences>false</useProjectReferences>
+        </configuration>
+      </plugin>
+    </plugins>
+  
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
